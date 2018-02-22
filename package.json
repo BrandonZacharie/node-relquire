@@ -1,0 +1,38 @@
+{
+  "name": "@brandonzacharie/relquire",
+  "version": "0.0.0",
+  "description": "A utility for loading modules using relative paths.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run nyc",
+    "nyc": "nyc -x test-* npm run mocha",
+    "mocha": "NODE_PATH=$NODE_PATH:./ mocha --exit --reporter list",
+    "lint": "npm run eslint && npm run remark",
+    "eslint": "eslint --ignore-path .gitignore --report-unused-disable-directives '**/*.js'",
+    "remark": "remark --ignore-path .gitignore --use lint --quiet --frail '.'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DecoratorApp/node-relquire.git"
+  },
+  "author": {
+    "name": "Brandon Zacharie",
+    "email": "brandon.zacharie@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.18.1",
+    "fs-promise": "^2.0.3",
+    "glob": "^7.1.2",
+    "mocha": "^5.0.1",
+    "nyc": "^11.4.1",
+    "remark-cli": "^5.0.0",
+    "remark-lint": "^6.0.1",
+    "remark-preset-lint-consistent": "^2.0.1",
+    "remark-preset-lint-recommended": "^3.0.1",
+    "rimraf": "^2.6.2"
+  }
+}
