@@ -1,6 +1,6 @@
 {
   "name": "@brandonzacharie/relquire",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A utility for loading modules using relative paths.",
   "main": "index.js",
   "scripts": {
